@@ -1,12 +1,38 @@
-var ArrayFunctions = function (){}
+/*jshint esversion: 6 */
+class ArrayFunctions {
+
+ static printSpecial (array) {
+   return array.join(" --- ");
+}
+
+static doubleArray(array){
+   return array.map(number=>number * 2);
+ }
+
+ static superPower(array){
+   return array.reduce((sum, number, index)=>sum + (number * (Math.pow(10, index))));
+ }
+
+}
+
+
+module.exports = ArrayFunctions;
+
+
+/*class ArrayFunctions{
+  ArrayFunctions.printSpecial = function (array) {
+    return array.join(" --- ");
+  };
+
+
+
+}
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
 // 12 -- 33 -- 144 -- 122
 
-ArrayFunctions.printSpecial = function (array) {
-  return array.join(" --- ");
-};
+
 
 // 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
 // ArrayFunctions.doubleMyArray([10, 20, 35, 12])
@@ -31,3 +57,4 @@ ArrayFunctions.superPower = function(array){
 }
 
 module.exports = ArrayFunctions;
+*/
