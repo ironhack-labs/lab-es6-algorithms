@@ -19,6 +19,8 @@ class ArrayFunctions {
   }
 }
 
+//stopped here
+
 // 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
 // ArrayFunctions.doubleMyArray([10, 20, 35, 12])
 // [20, 40, 70, 24]
