@@ -1,15 +1,18 @@
 function mergeSort(array) {
-  if(array.length < 2) { return array }
+  if (array.length < 2) {
+    return array;
+  }
 
-  var middle  = Math.floor(array.length / 2);
-  var left    = array.slice(0, middle);
-  var right   = array.slice(middle);
-
-  return sortHalves(mergeSort(left), mergeSort(right));
+  let middle  = Math.floor(array.length / 2);
+  let left    = array.slice(0, middle);
+  let right   = array.slice(middle);
+  let a = mergeSort(left);
+  let b = mergeSort(right);
+  return sortHalves(a, b);
 }
 
 function sortHalves(left, right) {
-  var array = [];
+  let array = [];
 
   while(left.length && right.length) {
     if(left[0] < right[0]) {
