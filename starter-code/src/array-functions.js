@@ -1,4 +1,15 @@
-var ArrayFunctions = function (){}
+
+
+class Arrays {
+    construtor(array) {
+        this.array = array;
+    }
+    printSpecial() {
+        return this.array.join(" --- ");
+    }
+}
+
+var ArrayFunctions = new Arrays();
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
@@ -13,7 +24,7 @@ ArrayFunctions.printSpecial = function (array) {
 // [20, 40, 70, 24]
 
 ArrayFunctions.doubleArray = function(array){
-  return array.map(function(number){
+  return array.map(number => {
     return number * 2;
   });
 };
@@ -25,9 +36,9 @@ ArrayFunctions.doubleArray = function(array){
 // explanation: (1)        + (20)       + (300)      + (4000)     + (50000)
 
 ArrayFunctions.superPower = function(array){
-  return array.reduce(function(sum, number, index){
+  return array.reduce((sum, number, index) => {
     return sum + (number * (Math.pow(10, index)));
   });
-}
+};
 
 module.exports = ArrayFunctions;
