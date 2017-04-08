@@ -127,4 +127,4 @@ class LetterSequence {
     }
 }
 
-module.exports = LetterSequence;		
+module.exports = LetterSequence;
