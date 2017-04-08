@@ -31,4 +31,4 @@ function bubbleSort(array) {
     return array;
 }
 
-module.exports = ArrayFunctions;
+module.exports = bubbleSort;		

@@ -127,4 +127,4 @@ class LetterSequence {
     }
 }
 
-module.exports = ArrayFunctions;
+module.exports = LetterSequence;		

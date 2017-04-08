@@ -50,4 +50,4 @@ function sortHalves(left, right) {
   return array.concat(left.slice()).concat(right.slice());
 }
 
-module.exports = ArrayFunctions;
+module.exports = mergeSort;
