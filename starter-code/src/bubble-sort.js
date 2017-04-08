@@ -1,12 +1,25 @@
-function bubbleSort(array) {
-    var length = array.length;
-    for (var i = (length - 1); i > 0; i--) {
-        // Number of passes
-        for (var j = (length - i); j > 0; j--) {
-            // Compare the adjacent positions
+//If using "let" and "const" is mandatory, check  second snippet
+
+function bubbleSort (array) {
+    for (let i = (array.length - 1); i > 0; i--) {
+        for (let j = (array.length - i); j > 0; j--) {
             if (array[j] < array[j - 1]) {
-                // Swap the numbers
-                var tmp = array[j];
+               [array[j - 1], array[j]] = [array[j], array[j - 1]];
+            }
+        }
+    }
+    return array;
+}
+
+module.exports = bubbleSort;
+
+
+function bubbleSort(array) {
+    const length = array.length;
+    for (let i = (length - 1); i > 0; i--) {
+        for (let j = (length - i); j > 0; j--) {
+            if (array[j] < array[j - 1]) {
+                let tmp = array[j];
                 array[j] = array[j - 1];
                 array[j - 1] = tmp;
             }
