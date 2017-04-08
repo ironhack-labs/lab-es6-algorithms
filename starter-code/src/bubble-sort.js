@@ -6,7 +6,7 @@ function bubbleSort(array) {
             // Compare the adjacent positions
             if (array[j] < array[j - 1]) {
                 // Swap the numbers
-                let tmp = array[j];
+                let tmp = array[j]; // could be const because each if statement is different in te for loop
                 array[j] = array[j - 1];
                 array[j - 1] = tmp;
             }
