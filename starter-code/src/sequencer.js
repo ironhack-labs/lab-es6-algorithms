@@ -1,24 +1,26 @@
-var LetterSequence = function(){}
+/*jshint esversion: 6*/
 
-LetterSequence.createSequence = function(sequence){
-  var characters      = sequence.split("");
-  var containerString = "";
-  var repeatCount     = 1;
+  class LetterSequence {
 
-  for (var i = 0; i < characters.length; i++){
-    var currentChar = characters[i];
-    var prevChar    = characters[i - 1];
-    var nextChar    = characters[i + 1];
+static createSequence (sequence){
+  let characters      = sequence.split("");
+  let containerString = "";
+  let repeatCount     = 1;
+
+  for (let i = 0; i < characters.length; i++){
+    let currentChar = characters[i];
+    let prevChar    = characters[i - 1];
+    let nextChar    = characters[i + 1];
 
     if (currentChar === prevChar){
-      repeatCount++
+      repeatCount++;
     }
 
     // If the sequence is broken, and the repeat count is greater than 1
     // add the letter and the repeat count to the return string
     if (currentChar !== nextChar && repeatCount >= 1){
-      var repeats = repeatCount > 1 ? String(repeatCount) : ""
-      containerString += (repeats + currentChar)
+      let repeats = repeatCount > 1 ? String(repeatCount) : "";
+      containerString += (repeats + currentChar);
       repeatCount = 1;
     }
   }
@@ -26,7 +28,7 @@ LetterSequence.createSequence = function(sequence){
   return containerString;
 }
 
-LetterSequence.decodeSequence = function(sequence){
+static decodeSequence (sequence){
   var containerString = "";
   var characters      = sequence.split("");
 
@@ -42,7 +44,7 @@ LetterSequence.decodeSequence = function(sequence){
     // If the current character is a letter, and the last character is a letter, then
     // it must be a lone letter
     } else if (isNaN(characters[i]) && isNaN(characters[i - 1])){
-      containerString += characters[i]
+      containerString += characters[i];
     }
   }
 
@@ -51,18 +53,18 @@ LetterSequence.decodeSequence = function(sequence){
 
 // Maybe there's a function to do this in ES6...?
 
-LetterSequence._repeat = function(count, character){
-  var characters = "";
+static ._repeat (count, character){
+  let characters = "";
 
   if (count <= 1){
-    count = 1
+    count = 1;
   }
 
-  for (var i = 0; i < count; i++){
+  for (let i = 0; i < count; i++){
     characters += character;
   }
 
   return characters;
 }
-
+}
 module.exports = LetterSequence;

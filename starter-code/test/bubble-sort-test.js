@@ -1,3 +1,5 @@
+
+/*jshint esversion: 6*/
 var { expect }  = require('chai');
 var bubbleSort  = require('../src/bubble-sort');
 
