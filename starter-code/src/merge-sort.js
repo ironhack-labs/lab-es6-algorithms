@@ -1,15 +1,18 @@
-function mergeSort(array) {
-  if(array.length < 2) { return array }
+/*jshint esversion: 6*/
 
-  var middle  = Math.floor(array.length / 2);
-  var left    = array.slice(0, middle);
-  var right   = array.slice(middle);
+
+function mergeSort(array) {
+  if(array.length < 2) { return array; }
+
+  const middle  = Math.floor(array.length / 2);
+  const left    = array.slice(0, middle);
+  const right   = array.slice(middle);
 
   return sortHalves(mergeSort(left), mergeSort(right));
 }
 
 function sortHalves(left, right) {
-  var array = [];
+  let array = [];
 
   while(left.length && right.length) {
     if(left[0] < right[0]) {
@@ -21,7 +24,12 @@ function sortHalves(left, right) {
   // array.slice() with no arguments is a trick to make a copy of the array
   // .concat is to smash all of the arrays together
   // ...maybe there's an ES6 way to do this?
-  return array.concat(left.slice()).concat(right.slice());
+
+  //return array.concat(left.slice()).concat(right.slice());
+/*  console.log(array.concat(left, right));*/
+  return array.concat(left, ...right);
 }
 
+/*array = [12, 15, 0, 3, 6, 5, 10, 7, 9, 3];
+mergeSort(array);*/
 module.exports = mergeSort;
