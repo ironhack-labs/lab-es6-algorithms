@@ -1,12 +1,25 @@
-var ArrayFunctions = function (){}
+// var ArrayFunctions = function (){}
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
 // 12 -- 33 -- 144 -- 122
 
-ArrayFunctions.printSpecial = function (array) {
-  return array.join(" --- ");
-};
+// ArrayFunctions.printSpecial = function (array) {
+//   return array.join(" --- ");
+// };
+
+class ArrayFunctions {
+  static printSpecial (array) {
+    return array.join(" --- ");
+  }
+  static doubleArray (array) => {
+    array.map() => {
+      return number * 2;
+    }
+  }
+}
+
+//stopped here
 
 // 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
 // ArrayFunctions.doubleMyArray([10, 20, 35, 12])
