@@ -3,6 +3,7 @@ class ArrayFunctions {
   // ArrayFunctions.printSpecial([12, 33, 144, 122])
   // 12 -- 33 -- 144 -- 122
 
+  // Class for utility
   static printSpecial(array) {
     return array.join(" --- ");
   }
