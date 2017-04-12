@@ -1,3 +1,5 @@
+let sequence = "aabbccabbca"
+
 var LetterSequence = function(){}
 
 LetterSequence.createSequence = function(sequence){

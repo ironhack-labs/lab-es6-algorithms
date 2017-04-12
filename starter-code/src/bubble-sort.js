@@ -1,3 +1,6 @@
+
+let array = [12, 15, 0, 3, 6, 5, 10, 7, 9, 3];
+
 function bubbleSort(array) {
     var length = array.length;
     for (var i = (length - 1); i > 0; i--) {

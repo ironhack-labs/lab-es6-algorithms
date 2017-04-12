@@ -1,3 +1,4 @@
+let array = [12, 15, 0, 3, 6, 5, 10, 7, 9, 3];
 function mergeSort(array) {
   if(array.length < 2) { return array }
 

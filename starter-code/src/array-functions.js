@@ -4,16 +4,19 @@ var ArrayFunctions = function (){}
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
 // 12 -- 33 -- 144 -- 122
 
-ArrayFunctions.printSpecial = function (array) {
-  return array.join(" --- ");
+let numSet1 = [12, 33, 144, 122];
+ArrayFunctions.printSpecial = function (numSet1) {
+  return numSet1.join(" --- ");
 };
+
 
 // 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
 // ArrayFunctions.doubleMyArray([10, 20, 35, 12])
 // [20, 40, 70, 24]
 
-ArrayFunctions.doubleArray = function(array){
-  return array.map(function(number){
+let numSet2 = [10,20,35,12];
+ArrayFunctions.doubleArray = function(numSet2){
+  return numSet2.map(function(number){
     return number * 2;
   });
 };
@@ -24,8 +27,9 @@ ArrayFunctions.doubleArray = function(array){
 // explanation: (1 x 10^0) + (2 x 10^1) + (3 x 10^2) + (4 x 10^3) + (5 x 10^4)
 // explanation: (1)        + (20)       + (300)      + (4000)     + (50000)
 
-ArrayFunctions.superPower = function(array){
-  return array.reduce(function(sum, number, index){
+let numSet3 = [1,2,3,4,5];
+ArrayFunctions.superPower = function(numSet3){
+  return numSet3.reduce(function(sum, number, index){
     return sum + (number * (Math.pow(10, index)));
   });
 }
