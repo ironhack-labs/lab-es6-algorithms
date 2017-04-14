@@ -5,7 +5,7 @@ var ArrayFunctions = function (){}
 // 12 -- 33 -- 144 -- 122
 
 ArrayFunctions.printSpecial = function (array) {
-  return array.join(" --- ");
+  return array.join(" --- ") ;
 };
 
 // 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
