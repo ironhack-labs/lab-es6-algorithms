@@ -9,7 +9,7 @@ function mergeSort(array) {
 }
 
 function sortHalves(left, right) {
-  var array = [];
+  let array = [];
 
   while(left.length && right.length) {
     if(left[0] < right[0]) {
@@ -21,7 +21,9 @@ function sortHalves(left, right) {
   // array.slice() with no arguments is a trick to make a copy of the array
   // .concat is to smash all of the arrays together
   // ...maybe there's an ES6 way to do this?
-  return array.concat(left.slice()).concat(right.slice());
+  array.push(...left,...right);
+  return array;
+  // return array.concat(left.slice()).concat(right.slice());
 }
 
 module.exports = mergeSort;
