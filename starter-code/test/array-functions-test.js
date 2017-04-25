@@ -9,6 +9,7 @@ describe('ArrayFunctions', function() {
     });
   });
 
+
   describe('doubleArray()', function(){
     it('should double the value of all numbers in an array', function(){
       var numbers = [10, 20, 35, 12];
