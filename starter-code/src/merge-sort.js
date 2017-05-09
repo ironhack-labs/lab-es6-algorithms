@@ -1,5 +1,5 @@
 function mergeSort(array) {
-  if(array.length < 2) { return array }
+  if(array.length < 2) { return array };
 
   var middle  = Math.floor(array.length / 2);
   var left    = array.slice(0, middle);
@@ -9,7 +9,7 @@ function mergeSort(array) {
 }
 
 function sortHalves(left, right) {
-  var array = [];
+  const array = [];
 
   while(left.length && right.length) {
     if(left[0] < right[0]) {
