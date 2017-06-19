@@ -1,4 +1,7 @@
-var LetterSequence = function(){}
+
+
+
+ LetterSequence = function(){}
 
 LetterSequence.prototype.createSequence = function(sequence){
   var characters      = sequence.split("");

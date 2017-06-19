@@ -21,7 +21,7 @@ function sortHalves(left, right) {
   // array.slice() with no arguments is a trick to make a copy of the array
   // .concat is to smash all of the arrays together
   // ...maybe there's an ES6 way to do this?
-  return array =[...left, ...right];
+  return array = [...array,...left, ...right];
 }
 
 module.exports = mergeSort;
