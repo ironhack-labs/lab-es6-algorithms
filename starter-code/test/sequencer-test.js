@@ -17,5 +17,5 @@ describe('LetterSequence', function() {
     it('should return a sequence with repetition count in letters', function() {
       expect(sequence.decodeSequence("2a2b2ca2bca")).to.equal("aabbccabbca");
     });
-  })
+  });
 });
