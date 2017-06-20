@@ -6,6 +6,7 @@ class ArrayFunctions {
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
 // 12 -- 33 -- 144 -- 122
 
+// static printSpecial(array) { ----------- fails(?)
   printSpecial(array) {
     return array.join(" --- ");
   }
@@ -14,6 +15,7 @@ class ArrayFunctions {
 // ArrayFunctions.doubleMyArray([10, 20, 35, 12])
 // [20, 40, 70, 24]
 
+// static doubleArray(array) { ----------- fails(?)
   doubleArray(array) {
     return array.map((number) => {
       return number * 2;
@@ -26,6 +28,7 @@ class ArrayFunctions {
 // explanation: (1 x 10^0) + (2 x 10^1) + (3 x 10^2) + (4 x 10^3) + (5 x 10^4)
 // explanation: (1)        + (20)       + (300)      + (4000)     + (50000)
 
+// static superPower(array) { ----------- fails(?)
   superPower(array) {
     return array.reduce((sum, number, index) => {
       return sum + (number * (Math.pow(10, index)));
