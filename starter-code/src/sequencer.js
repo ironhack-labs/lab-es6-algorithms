@@ -2,7 +2,7 @@ class LetterSequence {
   constructor (){}
 
   createSequence (sequence) {
-    let characters      = sequence.split("");
+    let characters      =  [...sequence];
     let containerString = "";
     let repeatCount     = 1;
 
@@ -25,7 +25,7 @@ class LetterSequence {
 
   decodeSequence (sequence){
     let containerString = "";
-    let characters      = sequence.split("");
+    let characters      =  [...sequence];
 
     for (let i = 0; i < characters.length; i++){
       let current         = characters[i];
