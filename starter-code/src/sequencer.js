@@ -1,4 +1,6 @@
-var LetterSequence = function(){}
+/*jshint esversion: 6 */
+
+var LetterSequence = function(){};
 
 LetterSequence.prototype.createSequence = function(sequence){
   var characters      = sequence.split("");
@@ -11,20 +13,20 @@ LetterSequence.prototype.createSequence = function(sequence){
     var nextChar    = characters[i + 1];
 
     if (currentChar === prevChar){
-      repeatCount++
+      repeatCount++;
     }
 
     // If the sequence is broken, and the repeat count is greater than 1
     // add the letter and the repeat count to the return string
     if (currentChar !== nextChar && repeatCount >= 1){
-      var repeats = repeatCount > 1 ? String(repeatCount) : ""
-      containerString += (repeats + currentChar)
+      var repeats = repeatCount > 1 ? String(repeatCount) : "";
+      containerString += (repeats + currentChar);
       repeatCount = 1;
     }
   }
 
   return containerString;
-}
+};
 
 LetterSequence.prototype.decodeSequence = function(sequence){
   var containerString = "";
@@ -42,12 +44,12 @@ LetterSequence.prototype.decodeSequence = function(sequence){
     // If the current character is a letter, and the last character is a letter, then
     // it must be a lone letter
     } else if (isNaN(characters[i]) && isNaN(characters[i - 1])){
-      containerString += characters[i]
+      containerString += characters[i];
     }
   }
 
   return containerString;
-}
+};
 
 // Maybe there's a function to do this in ES6...?
 
@@ -55,7 +57,7 @@ LetterSequence.prototype._repeat = function(count, character){
   var characters = "";
 
   if (count <= 1){
-    count = 1
+    count = 1;
   }
 
   for (var i = 0; i < count; i++){
@@ -63,6 +65,6 @@ LetterSequence.prototype._repeat = function(count, character){
   }
 
   return characters;
-}
+};
 
 module.exports = LetterSequence;
