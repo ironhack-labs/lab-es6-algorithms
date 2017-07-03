@@ -1,11 +1,13 @@
-var ArrayFunctions = function (){}
+/* jshint esversion:6 */
+
+var ArrayFunctions = function (){};
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
 // 12 -- 33 -- 144 -- 122
 
 ArrayFunctions.prototype.printSpecial = function (array) {
-  return array.join(" --- ");
+  return array.map((e) => e + " --- " );
 };
 
 // 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
@@ -28,6 +30,6 @@ ArrayFunctions.prototype.superPower = function(array){
   return array.reduce(function(sum, number, index){
     return sum + (number * (Math.pow(10, index)));
   });
-}
+};
 
 module.exports = ArrayFunctions;
