@@ -1,3 +1,4 @@
+/*jshint esversion:6*//*
 var ArrayFunctions = function (){}
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
@@ -28,6 +29,23 @@ ArrayFunctions.prototype.superPower = function(array){
   return array.reduce(function(sum, number, index){
     return sum + (number * (Math.pow(10, index)));
   });
+}
+*/
+
+
+
+class ArrayFunctions  {
+
+    printSpecial (array) {
+        return array.join(" --- ");
+    }
+
+  doubleArray (array) {
+    return array.map((number) => number*2);
+  }
+  superPower (array) {
+    return array.reduce((sum,number,index) =>  sum + (number * (Math.pow(10, index))));
+  }
 }
 
 module.exports = ArrayFunctions;
