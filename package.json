@@ -1,0 +1,21 @@
+{
+  "name": "lab-es6-algorithms",
+  "version": "1.0.0",
+  "description": "![Ironhack logo](https://i.imgur.com/1QgrNNw.png)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironhack-labs/lab-es6-algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ironhack-labs/lab-es6-algorithms/issues"
+  },
+  "homepage": "https://github.com/ironhack-labs/lab-es6-algorithms#readme"
+}
