@@ -1,4 +1,12 @@
-var LetterSequence = function(){}
+/*jshint esversion:6*/
+class LetterSequence(){
+  constructor(sequence){
+    let characters      = sequence.split("");
+    let containerString = "";
+    let repeatCount     = 1;
+  }
+  
+}
 
 LetterSequence.prototype.createSequence = function(sequence){
   var characters      = sequence.split("");
