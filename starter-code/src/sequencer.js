@@ -4,7 +4,7 @@ class LetterSequence{
     }
     
 static createSequence (sequence){
-  let characters      = sequence.split("");
+  let characters      = [...sequence];
   let containerString = "";
   let repeatCount     = 1;
 
@@ -31,7 +31,7 @@ static createSequence (sequence){
     
 static decodeSequence (sequence){
   let containerString = "";
-  let characters      = sequence.split("");
+  let characters      = [...sequence];
 
   for (let i = 0; i < characters.length; i++){
     const current         = characters[i];
