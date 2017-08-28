@@ -1,4 +1,25 @@
-var ArrayFunctions = function (){}
+
+const array = [12, 33, 144, 122];
+
+class ArrayFunctions {
+  constructor() {
+  }
+      printSpecial(array){
+       return array.join('---');
+    }
+    doubleArray(array){
+      return array.map((x) =>{
+        return x*2;
+      });
+    }
+    superPower(array){
+      return array.reduce((sum, number, index) => {
+        return sum + (number * (Math.pow(10, index)));
+      });
+    }
+}
+const emma = new ArrayFunctions();
+emma.printSpecial(array);
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
@@ -28,6 +49,6 @@ ArrayFunctions.prototype.superPower = function(array){
   return array.reduce(function(sum, number, index){
     return sum + (number * (Math.pow(10, index)));
   });
-}
+};
 
 module.exports = ArrayFunctions;
