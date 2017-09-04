@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 var { expect }  = require('chai');
 var mergeSort   = require('../src/merge-sort');
 
