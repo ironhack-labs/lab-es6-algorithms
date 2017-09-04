@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 var LetterSequence = function(){}
 
 LetterSequence.prototype.createSequence = function(sequence){
@@ -8,7 +10,7 @@ LetterSequence.prototype.createSequence = function(sequence){
   for (var i = 0; i < characters.length; i++){
     var currentChar = characters[i];
     var prevChar    = characters[i - 1];
-    var nextChar    = characters[i + 1];
+    let nextChar    = characters[i + 1];
 
     if (currentChar === prevChar){
       repeatCount++
