@@ -1,14 +1,14 @@
 var LetterSequence = function(){}
 
 LetterSequence.prototype.createSequence = function(sequence){
-  var characters      = sequence.split("");
-  var containerString = "";
-  var repeatCount     = 1;
+  let characters      = [...sequence]
+  let containerString = "";
+  let repeatCount     = 1;
 
-  for (var i = 0; i < characters.length; i++){
-    var currentChar = characters[i];
-    var prevChar    = characters[i - 1];
-    var nextChar    = characters[i + 1];
+  for (let i = 0; i < characters.length; i++){
+    const currentChar = characters[i];
+    const prevChar    = characters[i - 1];
+    const nextChar    = characters[i + 1];
 
     if (currentChar === prevChar){
       repeatCount++
@@ -17,7 +17,7 @@ LetterSequence.prototype.createSequence = function(sequence){
     // If the sequence is broken, and the repeat count is greater than 1
     // add the letter and the repeat count to the return string
     if (currentChar !== nextChar && repeatCount >= 1){
-      var repeats = repeatCount > 1 ? String(repeatCount) : ""
+      let repeats = repeatCount > 1 ? String(repeatCount) : ""
       containerString += (repeats + currentChar)
       repeatCount = 1;
     }
