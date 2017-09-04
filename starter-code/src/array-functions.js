@@ -1,22 +1,16 @@
-var ArrayFunctions = function (){}
+/*jshint esversion:6*/
 
-// 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
-// ArrayFunctions.printSpecial([12, 33, 144, 122])
-// 12 -- 33 -- 144 -- 122
 
-ArrayFunctions.prototype.printSpecial = function (array) {
-  return array.join(" --- ");
-};
-
-// 2) Define a function that takes an array with numbers and returns another array where each element contains double each element in the array
-// ArrayFunctions.doubleMyArray([10, 20, 35, 12])
-// [20, 40, 70, 24]
-
-ArrayFunctions.prototype.doubleArray = function(array){
-  return array.map(function(number){
-    return number * 2;
-  });
-};
+class ArrayFunctions {
+  printSpecial(){
+    return array.join(" --- ");
+  }
+  doubleArray(){
+    array.map(number => number*2);
+  }
+  superPower(array){
+  }
+}
 
 // 3) Define a function that takes an array with numbers and returns the result of multiplying each element by ten to the power of the position it's in:
 // ArrayFunctions.superPower([1,2,3,4,5])
