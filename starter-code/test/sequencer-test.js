@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 var { expect }     = require("chai");
 var LetterSequence = require('../src/sequencer');
 const sequence = new LetterSequence();
@@ -17,5 +19,5 @@ describe('LetterSequence', function() {
     it('should return a sequence with repetition count in letters', function() {
       expect(sequence.decodeSequence("2a2b2ca2bca")).to.equal("aabbccabbca");
     });
-  })
+  });
 });
