@@ -1,5 +1,5 @@
-let LetterSequence (() => {
-  createSequence(sequence){
+class LetterSequence {
+  createSequence(sequence) {
     let characters = sequence.split("");
     let containerString = "";
     let repeatCount = 1;
@@ -36,7 +36,7 @@ let LetterSequence (() => {
       // If the current character is not a number, then there must be a letter after it
       if (!isNaN(characters[i])) {
         // So repeat it n times, and add it to our return value
-        let letters = this._repeat(current, nextChar);
+        let letters = nextChar.repeat(current)
         containerString += letters;
         // If the current character is a letter, and the last character is a letter, then
         // it must be a lone letter
@@ -47,21 +47,6 @@ let LetterSequence (() => {
 
     return containerString;
   };
-
-  // Maybe there's a function to do this in ES6...?
-
-  _repeat(count, character) {
-    let characters = "";
-
-    if (count <= 1) {
-      count = 1;
-    }
-
-    for (let i = 0; i < count; i++) {
-      characters += character;
-    }
-
-    return characters;
-  };
 };
+
 module.exports = LetterSequence;
