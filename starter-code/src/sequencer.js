@@ -1,5 +1,11 @@
 var LetterSequence = function(){}
 
+class LetterSequence{
+  constructor(sequence){
+    this.characters = sequence.split("");
+  }
+}
+
 LetterSequence.prototype.createSequence = function(sequence){
   var characters      = sequence.split("");
   var containerString = "";
